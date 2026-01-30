@@ -9,7 +9,7 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     let mut counter = 0;
-    let mut guess_tries = 5;
+    let guess_tries = 5;
     // println!("The secret number is: {secret_number}");
 
     loop {
@@ -65,6 +65,7 @@ fn main() {
             println!("Guess Left {}", guess_tries - counter);
         } else {
             println!("You have used up your guess");
+            println!("The secret number is: {secret_number}");
             break;
         }
     }
